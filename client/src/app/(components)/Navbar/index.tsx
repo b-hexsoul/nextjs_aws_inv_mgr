@@ -1,10 +1,10 @@
 "use client"
 
-import { Bell, Menu, Settings, Sun } from "lucide-react"
+import { Bell, Menu, Moon, Settings, Sun } from "lucide-react"
 import Link from "next/link"
 import { Dispatch, SetStateAction } from "react"
 
-const Navbar = ({ setTheme, theme }: { setTheme: Dispatch<SetStateAction<boolean>>, theme: boolean }) => {
+const Navbar = ({ setTheme, lightMode }: { setTheme: Dispatch<SetStateAction<boolean>>, lightMode: boolean }) => {
   return (
     <div className="flex justify-between items-center w-full mb-7">
       <div className="flex justify-between items-center gap-5">
@@ -22,8 +22,12 @@ const Navbar = ({ setTheme, theme }: { setTheme: Dispatch<SetStateAction<boolean
       <div className="flex justify-between items-center gap-5">
         <div className="hidden md:flex justify-between items-center gap-5">
           <div>
-            <button onClick={() => setTheme(!theme)}>
-              <Sun className="cursor-pointer text-gray-500" size={24} />
+            <button onClick={() => setTheme(!lightMode)}>
+              {lightMode ? (
+                <Moon className="cursor-pointer text-gray-500" size={24} />
+              ) : (
+                <Sun className="cursor-pointer text-gray-500" size={24} />
+              )}
             </button>
           </div>
           <div className="relative">
