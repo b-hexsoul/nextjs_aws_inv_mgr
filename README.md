@@ -1,7 +1,7 @@
 # Inventory Manager
 Inventory Management Application
 
-## Technologies Used
+### Technologies Used
 - Next.js, Tailwind, MaterialUI, Recharts, Node.js, Express, PostreSQL, Prisma, AWS
 
 ### AWS Tech Used
