@@ -11,6 +11,7 @@ const initialState: InitialStateTypes = {
 };
 
 // Separate these slices out later.
+// Maybe remove both sidebar and dark mode from redux state??
 export const globalSlice = createSlice({
   name: 'global',
   initialState,
