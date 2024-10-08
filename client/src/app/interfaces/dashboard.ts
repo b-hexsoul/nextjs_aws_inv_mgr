@@ -1,12 +1,12 @@
 export interface IDashboardMetrics {
-  popularProducts: Product[]
-  salesSummary: SalesSummary[]
-  purchaseSummary: PurchaseSummary[]
-  expenseSummary: ExpenseSummary[]
-  expenseByCategory: ExpenseByCategory[]
+  popularProducts: IProduct[]
+  salesSummary: ISalesSummary[]
+  purchaseSummary: IPurchaseSummary[]
+  expenseSummary: IExpenseSummary[]
+  expenseByCategorySummary: IExpenseByCategory[]
 };
 
-interface Product {
+export interface IProduct {
   productId: string;
   name: string;
   price: number;
@@ -14,27 +14,27 @@ interface Product {
   stockQuantity: number;
 }
 
-interface SalesSummary {
+export interface ISalesSummary {
   salesSummaryId: string;
   totalValue: number;
   changePercentage: number;
   date: string;
 }
 
-interface PurchaseSummary {
+export interface IPurchaseSummary {
   purchaseSummaryId: string;
   totalPurchased: number;
   changePercentage: number;
   date: string;
 }
 
-interface ExpenseSummary {
+export interface IExpenseSummary {
   expenseSummaryId: string;
   totalExpenses: number;
   date: string;
 }
 
-interface ExpenseByCategory {
+export interface IExpenseByCategory {
   expenseByCategoryId: string;
   expenseSummaryId: string;
   category: string;
