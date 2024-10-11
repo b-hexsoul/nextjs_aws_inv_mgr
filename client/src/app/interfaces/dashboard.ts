@@ -6,12 +6,15 @@ export interface IDashboardMetrics {
   expenseByCategorySummary: IExpenseByCategory[]
 };
 
-export interface IProduct {
-  productId: string;
+export interface INewProduct {
   name: string;
   price: number;
   rating?: number;
   stockQuantity: number;
+}
+
+export interface IProduct extends INewProduct {
+  productId: string;
 }
 
 export interface ISalesSummary {
