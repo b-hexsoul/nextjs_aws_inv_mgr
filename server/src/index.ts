@@ -6,6 +6,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import dashboardRouter from "./routes/dashboard";
 import productsRouter from "./routes/productRoutes";
+import userRouter from './routes/userRoutes';
 
 // APP CONFIG
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(cors());
 // ROUTING
 app.use('/dashboard', dashboardRouter)
 app.use('/products', productsRouter)
+app.use('/user', userRouter)
 
 const port = process.env.PORT || 3001
 app.listen(port, () => {

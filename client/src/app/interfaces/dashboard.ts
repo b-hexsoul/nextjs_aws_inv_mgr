@@ -44,3 +44,9 @@ export interface IExpenseByCategory {
   amount: string;
   date: string;
 }
+
+export interface IUser {
+  userId: string;
+  name: string;
+  email: string;
+}
