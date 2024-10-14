@@ -26,7 +26,7 @@ export const baseAPI = createApi({
       }),
       invalidatesTags: ["Products"],
     }),
-    getUsers: builder.query<IUser, void>({
+    getUsers: builder.query<IUser[], void>({
       query: () => '/users',
       providesTags: ["Users"]
     }),
