@@ -1,11 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IDashboardMetrics, IProduct, INewProduct, IUser } from "@/app/interfaces/dashboard";
+import { IDashboardMetrics, IProduct, INewProduct, IUser, IExpenseByCategory } from "@/app/interfaces/dashboard";
 
 // Define a service using a base URL and expected endpoints
 export const baseAPI = createApi({
   reducerPath: "baseAPI",
   baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL }),
-  tagTypes: ["DashboardMetrics", "Products", "Users"],
+  tagTypes: ["DashboardMetrics", "Products", "Users", "Expenses"],
   endpoints: (builder) => ({
     getDashboardMetrics: builder.query<IDashboardMetrics, void>({
       query: () => '/dashboard',
@@ -30,6 +30,10 @@ export const baseAPI = createApi({
       query: () => '/users',
       providesTags: ["Users"]
     }),
+    getExpensesByCategory: builder.query<IExpenseByCategory[], void>({
+      query: () => "/expenses",
+      providesTags: ["Expenses"],
+    })
   }),
 });
 
@@ -37,5 +41,6 @@ export const {
   useGetDashboardMetricsQuery,
   useGetProductsQuery,
   useCreateProductMutation,
-  useGetUsersQuery
+  useGetUsersQuery,
+  useGetExpensesByCategoryQuery,
 } = baseAPI;
