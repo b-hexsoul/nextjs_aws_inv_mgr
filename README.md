@@ -6,3 +6,5 @@ Inventory Management Application
 
 ### AWS Tech Used
 - Amplify, S3, API Gateway, EC2, RDS
+
+![aws architecture](./aws_architecture.png)
