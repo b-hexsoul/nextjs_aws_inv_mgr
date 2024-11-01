@@ -1,5 +1,5 @@
 # Inventory Manager
-Inventory Management Application
+Inventory Management Application Project to get familiar with some AWS services
 
 ### Technologies Used
 - Next.js, Tailwind, MaterialUI, Recharts, Node.js, Express, PostreSQL, Prisma, AWS
