@@ -7,6 +7,6 @@ All data is dummy data to build to project and graphs.
 - Next.js, Tailwind, MaterialUI, Recharts, Node.js, Express, PostreSQL, Prisma, AWS
 
 ### AWS Tech Used
-- Amplify, S3, API Gateway, EC2, RDS
+- Amplify, S3, API Gateway, EC2, RDS, VPC, Subnets
 
 ![aws architecture](./aws_architecture.png)
