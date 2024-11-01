@@ -2,7 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from "@/app/redux"
 import { toggleSidebar } from "@/app/state";
-import { Archive, CircleDollarSign, Clipboard, Icon, LucideIcon, Menu, PanelsTopLeft, Settings2, User } from "lucide-react";
+import { Archive, CircleDollarSign, Clipboard, LucideIcon, Menu, PanelsTopLeft, Settings2 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
