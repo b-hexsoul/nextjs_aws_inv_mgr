@@ -10,6 +10,8 @@ All data is dummy data to build to project and graphs.
 - Tailwind, MaterialUI, Recharts
 - AWS
 
+![dashboard](./dashboard.png)
+
 ### AWS Tech Used
 - Amplify, S3, API Gateway, EC2, RDS, VPC, Subnets
 
