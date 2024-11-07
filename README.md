@@ -1,4 +1,4 @@
-# Inventory Manager
+# StockIt - Inventory Manager
 Inventory Management Application Project to get familiar with some AWS services
 
 All data is dummy data to build to project and graphs.
