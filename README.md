@@ -13,6 +13,6 @@ All data is dummy data to build to project and graphs.
 ![dashboard](./dashboard.png)
 
 ### AWS Tech Used
-- Amplify, S3, API Gateway, EC2, RDS, VPC, Subnets
+- Amplify, IAM, Cognito S3, API Gateway, EC2, RDS, VPC, Subnets
 
 ![aws architecture](./aws_architecture.png)
