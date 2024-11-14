@@ -14,10 +14,11 @@ datasource db {
 }
 
 model Users {
-  userId String @id
-  name   String
-  email  String
-  type   String
+  userId    String @id
+  name      String
+  email     String
+  type      String
+  cognitoId String
 }
 
 model Products {
