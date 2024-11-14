@@ -17,6 +17,7 @@ model Users {
   userId String @id
   name   String
   email  String
+  type   String
 }
 
 model Products {
