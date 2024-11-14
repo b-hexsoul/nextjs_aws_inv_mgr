@@ -49,4 +49,6 @@ export interface IUser {
   userId: string;
   name: string;
   email: string;
+  type: string;
+  congnitoId?: string;
 }

@@ -2,6 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from "@/app/redux"
 import { toggleSidebar } from "@/app/state";
+import { useGetAuthUserQuery } from "@/app/state/api";
 import { Archive, CircleDollarSign, Clipboard, LucideIcon, Menu, PanelsTopLeft, Settings2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,7 +35,11 @@ const SidebarLink = ({ href, icon: Icon, label }: ISidebarLinkProps) => {
 const Sidebar = () => {
   const { isSidebarCollapsed } = useAppSelector(({ global }) => global);
   const dispatch = useAppDispatch();
+  const { data: currentUser } = useGetAuthUserQuery({});
 
+  if (!currentUser) return null;
+  const { type } = currentUser?.userDetails;
+  console.log('type', type);
   const sidebarClassnames = `fixed flex flex-col justify-between ${
     isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"
   } bg-white transition-all duration-300 overflow-hidden h-full shadow-md z-40`;

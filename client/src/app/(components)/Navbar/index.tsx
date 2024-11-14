@@ -2,6 +2,8 @@
 
 import { useAppDispatch, useAppSelector } from "@/app/redux"
 import { toggleDarkMode, toggleSidebar } from "@/app/state"
+import { useGetAuthUserQuery } from "@/app/state/api"
+import { signOut } from "aws-amplify/auth"
 import { Bell, Menu, Moon, Settings, Sun } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -9,6 +11,18 @@ import Link from "next/link"
 const Navbar = () => {
   const dispatch = useAppDispatch();
   const { isDarkMode, isSidebarCollapsed } = useAppSelector(({ global }) => global);
+  const { data: currentUser } = useGetAuthUserQuery({});
+
+  const handleSignOut = async () => {
+    try {
+      await signOut();
+    } catch (error) {
+      console.error("Error signing out: ", error);
+    }
+  };
+
+  if (!currentUser) return null;
+
   return (
     <div className="flex justify-between items-center w-full mb-7">
       <div className="flex justify-between items-center gap-5">
@@ -56,6 +70,12 @@ const Navbar = () => {
         <Link href="/settings">
           <Settings className="text-gray-500 cursor-pointer" size={24} />
         </Link>
+        <button
+          className="hidden rounded bg-blue-400 px-4 py-2 text-xs font-bold text-white hover:bg-blue-500 md:block"
+          onClick={handleSignOut}
+        >
+          Sign out
+        </button>
       </div>
     </div>
   )
