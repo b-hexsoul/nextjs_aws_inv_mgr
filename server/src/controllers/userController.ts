@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
+import { v4 as uuidv4 } from 'uuid';
 
 const prisma = new PrismaClient();
 
@@ -31,14 +32,18 @@ export const getUser = async (req: Request, res: Response): Promise<void> => {
 
 export const postUser = async (req: Request, res: Response) => {
   try {
+    const userId = uuidv4();
     const {
       email,
+      name,
       cognitoId,
       type,
     } = req.body;
     const newUser = await prisma.users.create({
       data: {
+        userId,
         email,
+        name,
         cognitoId,
         type
       },

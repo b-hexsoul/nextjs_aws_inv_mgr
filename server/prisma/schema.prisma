@@ -18,7 +18,7 @@ model Users {
   name      String
   email     String
   type      String
-  cognitoId String
+  cognitoId String @unique
 }
 
 model Products {

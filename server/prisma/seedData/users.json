@@ -3,12 +3,14 @@
     "userId": "3b0fd66b-a4d6-4d95-94e4-01940c99aedb",
     "name": "Brandon Manager",
     "email": "brandon.hexsel@gmail.com",
-    "type": "manager"
+    "type": "manager",
+    "cognitoId": "123e4567-e89b-12d3-a456-426614174000"
   },
   {
     "userId": "d9d323fa-5c98-4222-a352-120e1f5e2798",
     "name": "Brandon Employee",
     "email": "brandon.hexsel.dev@gmail.com",
-    "type": "employee"
+    "type": "employee",
+    "cognitoId": "123e4567-e89b-12d3-a456-426614174041"
   }
 ]
