@@ -20,4 +20,6 @@ All data is dummy data to build to project and graphs.
 
 ![aws architecture](./aws_architecture.png)
 
+- Utilizing cognitoId for Users table
+
 ![iam cognito](./iam_cognito.png)
